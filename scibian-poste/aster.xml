@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mime-info xmlns="http://www.freedesktop.org/standards/shared-mime-info">
+  <mime-type type="text/x-aster">
+    <sub-class-of type="text/x-python"/>
+    <comment>Code_Aster file</comment>
+     <glob pattern="*.com[0-9]"/>
+     <glob pattern="*.comm"/>
+     <glob pattern="*.mess"/>
+     <glob pattern="*.capy"/>
+   </mime-type>
+</mime-info>
+

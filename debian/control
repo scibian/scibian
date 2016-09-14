@@ -1,0 +1,221 @@
+Source: scibian
+Section: scibian
+Priority: optional
+Maintainer: Scibian Packaging Team <packaging@scibian.org>
+Build-Depends: debhelper (>= 9)
+Standards-Version: 3.9.6
+
+Package: scibian-standard
+Architecture: any
+Depends: acl, apt-transport-https, at, bash-completion, bc, binfmt-support,
+         scibian-version, edf-ssl-certs,
+         gawk, htop, lsb-release, lsof, ltrace, numactl, rsync, openssh-server,
+         screen, sudo | sudo-ldap, strace, tcsh, tree, unattended-upgrades, vim
+Description: Scibian metapackage for base system
+ Scibian metapackage for base system, desktop & server
+
+Package: scibain-kernel-default
+Architecture: any
+Depends: scibian-kernel-3.16
+Description: Scibian metapackage for default kernel
+ Scibian metapackage for default kernel
+
+Package: scibian-kernel-3.16
+Architecture: any
+Depends: linux-doc-3.16, linux-headers-3.16.0-4-amd64, linux-image-3.16.0-4-amd64,
+         linux-libc-dev, linux-source-3.16, linux-kbuild-3.16
+Provides: scibian-kernel
+Description: Scibian metapackage for kernel 3.16
+ Scibian metapackage for kernel 3.16, include image, source & headers
+
+Package: scibian-poste
+Architecture: any
+Breaks: scibian-standard
+Depends: scibian-standard,
+         bash-doc, bind9-host, bzip2, bzip2-doc, scibian-kernel-default,
+         cgroup-tools, cups-client, curl, ftp, edc-base, grub-efi | grub-pc,
+         lftp, libpam-mkhomedir-scibian,
+         makepasswd, nfs-common, nfs4-acl-tools, openssh-client,
+         shared-mime-info, sl, tofrodos, vim-doc
+Recommends: popularity-contest
+Description: Scibian metapackage for workstations
+ Scibian metapackage for workstations
+
+Package: scibian-desktop
+Architecture: any
+Depends: scibian-devel, scibian-documentation, scibian-poste, gnome, scibian-gnome-config,
+         scibain-notify, xterm, xserver-xephyr, scibian-desktop-utils,
+# LibreOffice
+         hunspell-fr, hyphen-fr, libreoffice-help-fr, libreoffice-l10n-fr,
+         libreoffice-pdfimport, mythes-fr,
+# Firefox
+         scibian-browser-config
+Description: Scibian metapackage for desktop
+ Scibian metapackage for desktop
+
+Package: scibian-desktop-utils
+Architecture: any
+Depends: devhelp, emacs24, emacs-goodies-el, gedit-plugins, gnuplot, grace,
+         graphviz, graphviz-doc, mayavi2, paraview, rapidsvn, transfig, vim-gnome
+Description: Scibian metapackage for desktop tools
+ Scibian metapackage for desktop tools
+
+Package: scibian-devel
+Architecture: any
+Depends: scibian-standard, scibian-langage-c, scibian-langage-c++,
+         scibian-langage-fortran, scibian-langage-python,
+         autoconf, autoconf-doc, binutils, binutils-doc, build-essential,
+         bzip2, bzip2-doc, clang, cmake, cmake-doc, colordiff, colormake,
+         cvs, doxygen, doxygen-doc, flex, flex-doc, gdb, gdb-doc,
+         git, git-doc, m4, m4-doc, meld, mercurial, quilt, subversion, ui-auto,
+         comerr-dev, graphviz-dev, gstreamer0.10-doc, gstreamer0.10-plugins-base-doc,
+         gstreamer1.0-doc, gstreamer1.0-plugins-base-doc, hdf5-tools, icu-doc,
+         libargtable2-dev, libargtable2-docs, libaudio-dev, libavahi-client-dev,
+         libbz2-dev, libcgns-dev, libcups2-dev, libdrm-dev, libfontconfig1-dev, libfreeimage-dev,
+         libfreetype6-dev, libftgl-dev, libgl1-mesa-dev, libgl1-mesa-dri, libgl1-mesa-glx,
+         libgl2ps-dev, libglu1-mesa-dev, libgstreamer0.10-dev, libgstreamer1.0-dev,
+         libgstreamer-plugins-base0.10-dev, libgstreamer-plugins-base1.0-dev,
+         libhdf5-dev, libhdf5-doc, libhwloc-dev, libhwloc-doc,
+         libice-dev, libice-doc, libicu-dev, libilmbase-dev, libjasper-dev,
+         libjbig-dev, libjpeg62-turbo-dev, libjs-jquery, liblcms2-dev, libltdl-dev,
+         libmatheval-dev, libmng-dev, libnetcdf-dev, libomniorb4-dev, libomnithread3-dev,
+         liborc-0.4-dev, liborc-0.4-doc, libpciaccess-dev, libpthread-workqueue-dev,
+         libqscintilla2-dev, libraw-dev, libraw-doc, librdmacm-dev,
+         libsm-dev, libsm-doc, libtbb-dev, libtbb-doc, libtiff5-dev, libtiff-doc,
+         libtool-doc, libxml2-dev, libxml2-doc, libxmu-dev, libxrender-dev,
+         libxt-dev, libxt-doc, libxtst-dev, libxtst-doc, libxxf86vm-dev,
+         netcdf-bin, netcdf-doc, time
+Description: Scibian development metapackage
+ Scibian development metapackage
+
+Package: scibian-langage-c
+Architecture: any
+Depends: scibian-standard, scibian-devel,
+         bison, bison-doc, colorgcc, cpp, cpp-doc, gcc, gcc-doc, gcc-multilib,
+         glibc-doc, libblas-dev, libblas-doc, libc6-dev-i386, libfftw3-dev, libfftw3-doc,
+         libgmp3-dev, libgsl0-dev, libgtk2.0-dev, libhdf5-openmpi-dev, libmotif-dev, libmpfr-dev,
+         libopenblas-dev, libopenmpi1.6, libopenmpi-dev, libpng12-dev,
+         openmpi-bin, openmpi-checkpoint, openmpi-doc
+Description: Scibian metapackage for C
+ Scibian metapackage for C
+
+Package: scibian-langage-c++
+Architecture: any
+Depends: scibian-standard, scibian-devel,
+         bisonc++, bisonc++-doc, g++-multilib, libblitz0-dev, libblitz-doc,
+         libboost-all-dev, libboost-doc, libcppunit-dev, libcppunit-doc,
+         libeigen3-dev, libeigen3-doc, libqt4-dev, libqt5core5a, libqt5dbus5,
+         libqt5declarative5, libqt5designer5, libqt5gui5, libqt5help5,
+         libqt5network5, libqt5opengl5, libqt5scripttools5, libqt5sql5, libqt5sql5-mysql,
+         libqt5svg5, libqt5test5, libqt5xml5, libqt5xmlpatterns5, libqwt-dev, libqwt-doc,
+         libvtk5-qt4-dev, qt4-dev-tools, qt4-doc, qtbase5-dev, qtbase5-doc-html,
+         qtquick1-5-dev, qtscript5-dev, qtscript5-doc-html
+Description: Scibian metapackage for C++
+ Scibian metapackage for C++
+
+Package: scibian-langage-fortran
+Architecture: any
+Depends: scibian-standard, scibian-devel,
+         gfortran, gfortran-doc, gfortran-multilib,
+         liblapack-dev, liblapack-doc, liblapack-doc-man
+Description: Scibian metapackage for Fortran
+ Scibian metapackage for Fortran
+
+Package: scibian-langage-python
+Architecture: any
+Depends: scibian-standard, scibian-devel,
+         ipython, ipython-doc, pyflakes, pylint, pyqt4-dev-tools, python, python3,
+         python3-coverage, python3-doc,python3-docutils,python3-matplotlib, python3-nose,
+         python3-numpy, python3-scipy, python3-setuptools, python3-sip-dev, python3-sphinx,
+         python3-tables, python-coverage, python-doc, python-docutils, python-gi-dev,
+         python-gnuplot, python-gtk2-dev, python-matplotlib, python-matplotlib-doc, python-mpi,
+         python-nose, python-numpy, python-numpy-doc, python-plplot, python-qt4, python-qt4-dev,
+         python-qt4-doc, python-scientific-doc, python-scipy, python-setuptools, python-setuptools-doc,
+         python-sip-dev, python-sphinx, python-tables, python-twisted, python-vtk6
+Description: Scibian metapackage for Python
+ Scibian metapackage for Python
+
+Package: scibian-langage-erlang
+Architecture: any
+Depends: scibian-standard, scibian-devel,
+         erlang, erlang-doc, erlang-examples,
+         erlang-manpages, erlang-mode, erlang-src, erlang-x11
+Description: Scibian metapackage for Erlang
+ Scibian metapackage for Erlang
+
+Package: scibian-langage-haskell
+Architecture: any
+Depends: scibian-standard, scibian-devel,
+         libghc-mtl-dev, libghc-mtl-doc,
+         libghc-parsec3-dev, libghc-parsec3-doc, libghc-network-dev, libghc-network-doc,
+         libghc-regex-posix-dev, libghc-regex-posix-doc, libghc-parallel-dev,
+         libghc-parallel-doc, libghc-gtk-dev, libghc-gtk-doc
+Description: Scibian metapackage for Haskell
+ Scibian metapackage for Haskell
+
+Package: scibian-langage-r
+Architecture: any
+Depends: scibian-standard, scibian-devel,
+         ess, r-base, r-doc-pdf, r-doc-info, r-doc-html,
+         r-cran-abind, r-cran-amore, r-cran-bayesm, r-cran-boot, r-cran-cairodevice, r-cran-car, r-cran-chron,
+         r-cran-coda, r-cran-codetools, r-cran-date, r-cran-dbi, r-cran-eco, r-cran-effects,
+         r-cran-fbasics, r-cran-fcopulae, r-cran-fextremes, r-cran-fmultivar, r-cran-foptions,
+         r-cran-foreign, r-cran-fportfolio, r-cran-gdata, r-cran-gmodels, r-cran-gplots, r-cran-gregmisc,
+         r-cran-gtools, r-cran-hdf5, r-cran-hmisc, r-cran-its, r-cran-kernsmooth, r-cran-lattice,
+         r-cran-latticeextra, r-cran-lme4, r-cran-lmtest, r-cran-mapdata, r-cran-mapproj, r-cran-maps,
+         r-cran-matchit, r-cran-matrix, r-cran-mcmcpack, r-cran-mgcv, r-cran-misc3d, r-cran-mnp, r-cran-msm,
+         r-cran-multcomp, r-cran-mvtnorm, r-cran-nlme, r-cran-pscl, r-cran-psy, r-cran-qtl, r-cran-quadprog,
+         r-cran-relimp, 
+         r-cran-rgl, r-cran-rgtk2, r-cran-rmpi, r-cran-rmysql,
+         r-cran-rodbc, r-cran-rpart, r-cran-rquantlib, r-cran-rserve, r-cran-rsprng,
+         r-cran-sandwich, r-cran-sm, r-cran-snow, r-cran-strucchange, r-cran-survival, r-cran-teachingdemos,
+         r-cran-tkrplot, r-cran-tseries, r-cran-vgam, r-cran-vr, r-cran-xml, r-cran-zelig, r-cran-zoo, 
+         r-cran-xtable
+Description: Scibian metapackage for R
+ Scibian metapackage for R
+
+Package: scibian-langage-tex
+Architecture: any
+Depends: scibian-standard, scibian-devel,
+         texlive, texlive-latex-extra, texlive-doc-fr,
+         texlive-science, texlive-science-doc, texinfo, lmodern
+Description: Scibian metapackage for TeX
+ Scibian metapackage for TeX
+
+Package: scibian-langage-tcltk
+Architecture: any
+Depends: scibian-standard, scibian-devel,
+         expect, perl-tk, tcl-dev, tcl-doc, tix, tix-dev, tk-dev, tk-doc
+Description: Scibian metapackage for TCL/TK
+ Scibian metapackage for TCL/TK
+
+Package: scibian-non-free
+Section: contrib/edf
+Architecture: any
+Depends: scibian-standard,
+         firmware-linux, intel-microcode, unrar
+Description: Scibian metapackage for non free software
+ Scibian metapackage for non free software
+
+Package: scibian-desktop-non-free
+Section: contrib/edf
+Architecture: any
+Depends: scibian-standard, scibian-desktop, scibian-non-free,
+         flashplugin-nonfree, ttf-mscorefonts-installer
+Description: Scibian metapackage for non free desktop software
+ Scibian metapackage for non free desktop software
+
+Package: scibian-eclipse
+Architecture: any
+Depends: scibian-standard (= ${binary:Version}), eclipse, eclipse-jdt,
+         eclipse-cdt, eclipse-gef, eclipse-gef-doc, eclipse-egit, eclipse-subclipse
+Description: Scibian metapackage for Eclipse
+ Scibian metapackage for Eclipse
+
+Package: scibian-ldap
+Architecture: any
+Depends: scibian-standard,
+         cracklib-runtime, sssd, libpam-sss, libnss-sss, krb5-user
+Description: Scibian metapackage for LDAP authentification
+ Scibian metapackage for LDAP authentification
+

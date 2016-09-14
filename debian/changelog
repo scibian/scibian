@@ -1,0 +1,5 @@
+scibian (8.0) jessie; urgency=low
+
+  * Initial release.
+
+ -- Scibian Packaging Team <packaging@scibian.org>  Wed, 14 Sep 2016 11:53:10 +0200

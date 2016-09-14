@@ -1,0 +1,111 @@
+#! /usr/bin/python
+# -*- coding: utf-8 -*-
+
+default_pkgs = [
+    "scibian-standard",
+    ]
+
+tasks_pkgs = [
+    "scibian-desktop",
+    "scibian-poste"
+    "scibian-desktop-non-free",
+    "scibian-non-free",
+    ]
+
+linux_version = file("/proc/version").readline().split(")")[0]+")"
+
+from optparse import OptionParser
+parser = OptionParser(usage=u'''scibian_versions [ -v | -vv | -d | -a ]
+Show Scibian metapackages version''')
+parser.add_option("-v", action="count", dest="verbose", help=u"Verbose")
+parser.add_option("-d", "--default", action="store_const", dest="verbose", const=3, help=u"Show all default packages (équivalent à -vvv)")
+parser.add_option("-a", "--all", action="store_const", dest="verbose", const=4, help=u"Show all system packages (équivalent à -vvvv)")
+(options,args)=parser.parse_args()
+
+import sys 
+
+all_packages={}
+pkginfo={}
+for l in file("/var/lib/dpkg/status"):
+    if l[0] == " ":
+        # Long description
+        continue
+    elif l[0] == "\n":
+        # End description
+        if "Package" in pkginfo and "Version" in pkginfo and "Status" in pkginfo and pkginfo["Status"] == "install ok installed":
+            deps=[]
+            # Generate depends list
+            for field in ["Depends", "Pre-Depends", "Recommends"]:
+                if field in pkginfo:
+                    for ordep in pkginfo[field].split(","):
+                        for dep in ordep.split("|"):
+                            deps.append (dep.split("(",1)[0].strip())
+            pkginfo["deps"] = deps
+            all_packages[pkginfo["Package"]]=pkginfo
+        pkginfo={}
+    else:
+        try:
+            l = l.strip().split(": ", 1)
+            [ field, value ] = l
+            pkginfo[field] = value
+        except ValueError:
+            pass
+
+def print_versions(pkglist):
+    for pkg in pkglist:
+        if pkg in all_packages:
+            print "    %-30s %s"%(pkg, all_packages[pkg]["Version"])
+
+try:
+    scibian_version = all_packages["scibian-version"]["Version"]
+except KeyError:
+    scibian_version = '??'
+
+try:
+    debian_version = file("/etc/debian_version").readline().strip()
+except IOError:
+    debian_version = '??'
+
+print "Scibian version %s (Debian %s)"%(scibian_version, debian_version)
+
+print "KERNEL"
+print "    "+linux_version
+
+if options.verbose >= 1:
+    display_pkgs = tasks_pkgs
+else:
+    display_pkgs = default_pkgs
+
+display_pkgs.append('linux-image-'+linux_version.split()[2])
+
+def all_deps(pkg, already_done, direct_only=False):
+    if pkg in already_done:
+        return set()
+    ret=set([pkg])
+    already_done.add(pkg)
+    if pkg in all_packages:
+        for dep in all_packages[pkg]["deps"]:
+            if direct_only and not dep.startswith("scibian-"):
+                ret.add(dep)
+            else:
+                ret |= all_deps (dep, already_done, direct_only)
+    return ret
+
+if options.verbose <= 1:
+    print "NATIONAL PACKAGES"
+    print_versions (display_pkgs)
+else:
+    print "INSTALLED PACKAGES"
+    if options.verbose >= 4:
+        display_pkgs=all_packages.keys()
+    else: # 2 ou 3
+        done_packages=set()
+        tmp_pkgset=set()
+        for pkg in display_pkgs: #+local+site
+            if options.verbose == 2:
+                tmp_pkgset |= all_deps(pkg, done_packages, True)
+            else: # verbose=3
+                tmp_pkgset |= all_deps(pkg, done_packages)
+        display_pkgs = list(tmp_pkgset)
+    display_pkgs.sort()
+    print_versions(display_pkgs)

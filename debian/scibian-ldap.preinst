@@ -1,0 +1,9 @@
+#!/bin/sh
+
+
+[ -d /usr/lib/scibian ] || mkdir -p /usr/lib/scibian
+
+dpkg-divert --package scibian-ldap --add --rename \
+           --divert /usr/lib/scibian/pam-sss.orig /usr/share/pam-configs/sss
+
+#DEBHELPER#

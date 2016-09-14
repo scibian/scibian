@@ -1,0 +1,12 @@
+#!/bin/sh
+
+set -e
+
+dpkg-maintscript-helper rm_conffile /etc/motd 8.0 -- "$@"
+
+if [ "$(dpkg-divert --listpackage /etc/motd)" = 'scibian-standard' ]
+then
+	dpkg-divert --package scibian-standard --remove --divert /etc/motd.pre-scibian /etc/motd
+fi
+
+#DEBHELPER#

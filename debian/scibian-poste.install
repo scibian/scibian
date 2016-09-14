@@ -1,0 +1,6 @@
+scibian-poste/org.freedesktop.login1.hibernate.pkla /etc/polkit-1/localauthority/20-org.d
+scibian-poste/org.freedesktop.udisks2.pkla /etc/polkit-1/localauthority/20-org.d
+scibian-poste/scibian-passwd.desktop /usr/share/applications
+scibian-poste/aster.xml /usr/share/mime/packages
+scibian-poste/motd /etc
+scibian-poste/70-keyboard.hwdb /etc/udev/hwdb.d/

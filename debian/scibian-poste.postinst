@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# Update mimetype datebase
+update-mime-database /usr/share/mime > /dev/null 2>&1
+
+# Update udev hardware database
+udevadm hwdb --update > /dev/null 2>&1
+
+#DEBHELPER#

@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Scibian change password
+Comment=Change user password in Scibian.
+Icon=seahorse
+Exec=bash -c 'passwd; echo "Press ENTER to exit."; read'
+Terminal=true
+Type=Application
+Categories=Scibian;
