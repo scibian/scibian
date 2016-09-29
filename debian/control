@@ -14,7 +14,7 @@ Depends: acl, apt-transport-https, at, bash-completion, bc, binfmt-support,
 Description: Scibian metapackage for base system
  Scibian metapackage for base system, desktop & server
 
-Package: scibain-kernel-default
+Package: scibian-kernel-default
 Architecture: any
 Depends: scibian-kernel-3.16
 Description: Scibian metapackage for default kernel
@@ -30,10 +30,10 @@ Description: Scibian metapackage for kernel 3.16
 
 Package: scibian-poste
 Architecture: any
-Breaks: scibian-standard
 Depends: scibian-standard,
          bash-doc, bind9-host, bzip2, bzip2-doc, scibian-kernel-default,
-         cgroup-tools, cups-client, curl, ftp, edc-base, grub-efi | grub-pc,
+         cgroup-tools, cups-client, curl, ftp, grub-efi | grub-pc,
+# edc-base
          lftp, libpam-mkhomedir-scibian,
          makepasswd, nfs-common, nfs4-acl-tools, openssh-client,
          shared-mime-info, sl, tofrodos, vim-doc
@@ -44,7 +44,7 @@ Description: Scibian metapackage for workstations
 Package: scibian-desktop
 Architecture: any
 Depends: scibian-devel, scibian-documentation, scibian-poste, gnome, scibian-gnome-config,
-         scibain-notify, xterm, xserver-xephyr, scibian-desktop-utils,
+         scibian-notify, xterm, xserver-xephyr, scibian-desktop-utils,
 # LibreOffice
          hunspell-fr, hyphen-fr, libreoffice-help-fr, libreoffice-l10n-fr,
          libreoffice-pdfimport, mythes-fr,
