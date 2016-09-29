@@ -8,7 +8,7 @@ Standards-Version: 3.9.6
 Package: scibian-standard
 Architecture: any
 Depends: acl, apt-transport-https, at, bash-completion, bc, binfmt-support,
-         scibian-version, edf-ssl-certs,
+         scibian-version,
          gawk, htop, lsb-release, lsof, ltrace, numactl, rsync, openssh-server,
          screen, sudo | sudo-ldap, strace, tcsh, tree, unattended-upgrades, vim
 Description: Scibian metapackage for base system
@@ -190,7 +190,7 @@ Description: Scibian metapackage for TCL/TK
  Scibian metapackage for TCL/TK
 
 Package: scibian-non-free
-Section: contrib/edf
+Section: contrib/scibian
 Architecture: any
 Depends: scibian-standard,
          firmware-linux, intel-microcode, unrar
@@ -198,7 +198,7 @@ Description: Scibian metapackage for non free software
  Scibian metapackage for non free software
 
 Package: scibian-desktop-non-free
-Section: contrib/edf
+Section: contrib/scibian
 Architecture: any
 Depends: scibian-standard, scibian-desktop, scibian-non-free,
          flashplugin-nonfree, ttf-mscorefonts-installer
