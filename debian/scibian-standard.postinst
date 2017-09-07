@@ -1,0 +1,12 @@
+#!/bin/sh
+
+set -e
+
+# Use Bash as default shell for new users
+
+echo "SHELL=/bin/bash" > /etc/default/useradd
+
+# PAM update
+pam-auth-update --package
+
+#DEBHELPER#

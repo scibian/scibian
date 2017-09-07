@@ -1,0 +1,5 @@
+scibian-standard/99nocheckvalid				/etc/apt/apt.conf.d
+scibian-standard/21auto-upgrades-scibian		/etc/apt/apt.conf.d
+scibian-standard/51unattended-upgrades-scibian		/etc/apt/apt.conf.d
+scibian-standard/drop-user-messages.conf		/etc/rsyslog.d
+scibian-standard/vimrc.local				/etc/vim   

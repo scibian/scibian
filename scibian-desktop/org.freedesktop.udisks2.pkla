@@ -1,0 +1,6 @@
+[Allow users to mount eSATA drives]
+Identity=*
+Action=org.freedesktop.udisks2.filesystem-mount-system
+ResultAny=no
+ResultInactive=no
+ResultActive=yes

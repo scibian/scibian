@@ -1,0 +1,12 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@
+
+override_dh_installdirs:
+	dh_installdirs
+	install -D -m 644 $(CURDIR)/debian/scibian-standard.pam-auth-update \
+		 $(CURDIR)/debian/scibian-standard/usr/share/pam-configs/scibian-standard
+
+override_dh_installgsettings:
+	dh_installgsettings --priority 90

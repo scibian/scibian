@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Modify Password
+Name[fr]=Changer le mot de passe
+Comment=Change Scibian user password
+Comment[fr]=Changement du mot de passe utilisateur
+Icon=seahorse
+Exec=bash -c 'passwd; echo "Press any key to exit."; read'
+Terminal=true
+Type=Application
+Categories=Scibian;

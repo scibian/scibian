@@ -1,0 +1,5 @@
+#!/bin/sh
+
+dpkg-divert --package scibian-desktop --remove --rename --divert /etc/motd.pre-scibian /etc/motd
+
+#DEBHELPER#

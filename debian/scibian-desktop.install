@@ -1,0 +1,14 @@
+scibian-desktop/org.freedesktop.login1.hibernate.pkla /etc/polkit-1/localauthority/20-org.d
+scibian-desktop/org.freedesktop.udisks2.pkla /etc/polkit-1/localauthority/20-org.d
+scibian-desktop/scibian-passwd.desktop /usr/share/applications
+scibian-desktop/06_scibian_theme /etc/grub.d/
+scibian-desktop/scibian_background.sh /usr/share/scibian/grub/
+scibian-desktop/scibian-grub.png /usr/share/scibian/grub/
+scibian-desktop/aster.xml /usr/share/mime/packages
+scibian-desktop/motd /etc
+scibian-desktop/wallpapers/* /usr/share/wallpapers/scibian
+scibian-desktop/scibian.xml /usr/share/gnome-background-properties
+scibian-desktop/icons/* /usr/share/icons/scibian
+scibian-desktop/99-scibian-settings /usr/share/gdm/dconf
+scibian-desktop/scibian-prefs.js /usr/lib/firefox-esr/defaults/pref/
+scibian-desktop/scibian.cfg /usr/lib/firefox-esr/

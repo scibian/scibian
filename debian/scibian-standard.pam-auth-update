@@ -1,0 +1,6 @@
+Name: Scibian configuration
+Default: yes
+Priority: 255
+Auth-Type: Additional
+Auth:
+	optional   pam_group.so

@@ -1,0 +1,34 @@
+#!/bin/sh
+
+# Update Grub
+update-grub > /dev/null 2>&1
+
+# Update mimetype datebase
+update-mime-database /usr/share/mime > /dev/null 2>&1
+
+set -e
+
+set -u
+ckbi=/usr/lib/firefox-esr/libnssckbi.so
+if [ -z "$(dpkg-divert --listpackage $ckbi)" ]; then
+    dpkg-divert --package scibian-desktop \
+            --rename --divert $ckbi.firefox-esr \
+            --add $ckbi
+    ln -sf ../x86_64-linux-gnu/pkcs11/p11-kit-trust.so $ckbi
+fi
+unset ckbi
+set +u
+
+set -u
+ckbi=/usr/lib/iceweasel/libnssckbi.so
+if [ scibian-desktop = "$(dpkg-divert --listpackage $ckbi)" ]; then
+    unlink $ckbi
+    dpkg-divert --package scibian-desktop \
+            --rename --remove $ckbi
+fi
+unset ckbi
+set +u
+
+#DEBHELPER#
+
+exit 0

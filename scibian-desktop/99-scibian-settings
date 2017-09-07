@@ -1,0 +1,16 @@
+# These are the options for the greeter session that can be set 
+# through GSettings. Any GSettings setting that is used by the 
+# greeter session can be set here.
+
+# Note that you must configure the path used by dconf to store the 
+# configuration, not the GSettings path.
+
+# Login manager options
+# =====================
+[org/gnome/login-screen]
+logo='/usr/share/icons/scibian/png/scibian.png'
+fallback-logo='/usr/share/icons/scibian/png/scibian.png'
+
+# Show Scibian 9 banner
+banner-message-enable=true
+banner-message-text='Scibian 9'

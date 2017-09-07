@@ -1,0 +1,4 @@
+[Disable Hibernation]
+Identity=unix-user:*
+Action=org.freedesktop.login1.hibernate
+ResultActive=no

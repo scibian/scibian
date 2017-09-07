@@ -1,0 +1,2 @@
+# Use p11-kit instead of nssckbi for Firefox ESR
+#usr/lib/x86_64-linux-gnu/pkcs11/p11-kit-trust.so usr/lib/firefox-esr/libnssckbi.so
