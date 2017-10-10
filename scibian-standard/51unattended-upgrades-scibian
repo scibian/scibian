@@ -36,6 +36,7 @@ Unattended-Upgrade::Package-Blacklist {
 //	"libc6";
 //	"libc6-dev";
 //	"libc6-i686";
+	"virtualbox*";
 };
 
 // This option allows you to control if on a unclean dpkg exit

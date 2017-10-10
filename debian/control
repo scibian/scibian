@@ -3,7 +3,7 @@ Section: scibian
 Priority: optional
 Maintainer: Scibian Packaging Team <packaging@scibian.org>
 Build-Depends: debhelper (>= 10)
-Standards-Version: 4.0.0
+Standards-Version: 4.1.1
 
 Package: scibian-standard
 Architecture: any
@@ -22,7 +22,7 @@ Description: Scibian metapackage for default kernel
 
 Package: scibian-kernel-4.9
 Architecture: any
-Depends: linux-doc-4.9, linux-headers-4.9.0-3-amd64, linux-image-4.9.0-3-amd64,
+Depends: linux-doc-4.9, linux-headers-amd64, linux-image-amd64,
          linux-kbuild-4.9, linux-libc-dev, linux-source-4.9
 Provides: scibian-kernel
 Description: Scibian metapackage for kernel 4.9
@@ -33,14 +33,14 @@ Architecture: any
 Depends: scibian-standard, scibian-gnome,
 # System utils
          cgroup-tools, ftp, lftp,
-         cryptsetup, cups-client, curl, makepasswd,
+         cryptsetup, curl, makepasswd,
          nfs-common, nfs4-acl-tools,
          sl, tofrodos, xterm, xserver-xephyr,
 # Documentation
          bash-doc, vim-doc, bzip2-doc,
 # Scibian
 #        scibian-documentation,
-         scibian-devel, scibian-notify,
+         scibian-devel, scibian-notify, scibian-modules,
 # Apps & add-ons
          devhelp, emacs25, emacs-goodies-el, gedit-plugins,
          gnome-packagekit, libreoffice-pdfimport,
@@ -56,8 +56,7 @@ Description: Scibian metapackage for desktop
 Package: scibian-devel
 Architecture: any
 Depends: scibian-standard, scibian-language-c, scibian-language-c++,
-         scibian-language-fortran, 
-#calibre-language-python,
+         scibian-language-fortran, scibian-language-python,
          autoconf, autoconf-doc, binutils, binutils-doc, build-essential,
          bzip2, bzip2-doc, clang, cmake, cmake-doc, colordiff, colormake,
          cvs, doxygen, doxygen-doc, flex, flex-doc, gdb, 

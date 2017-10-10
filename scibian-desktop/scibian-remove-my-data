@@ -1,0 +1,40 @@
+#!/bin/bash
+
+echo "###################################################"
+echo "## BLANCHIMENT DES DONNÉES PERSONNELLES DU POSTE ##"
+echo "###################################################"
+echo ""
+
+if [ $(pwd) != $(echo ~) ] ; then
+  	echo "Cette commande doit être lancée depuis votre dossier personnel."
+echo "Merci de vous référer à la documentation utilisateur avant d'utiliser cette commande."
+	exit 1
+fi
+
+if [ $(tty) != '/dev/tty2' ] ; then
+  	echo "Cette commande doit être lancée depuis le terminal texte numéro 2."
+	echo "Merci de vous référer à la documentation utilisateur avant d'utiliser cette commande."
+	exit 2
+fi
+
+ocs=$(awk '/^Package: / { print $2}' /var/lib/apt/lists/*scibian9-applis* | while read pkg ; do if grep -sq '^Package: '"$pkg"'$' /var/lib/dpkg/status && dpkg -l "$pkg" | grep -sq "^ii" ; then echo -e "\t$pkg" ; fi ; done)
+if [ -n "$ocs" ] ; then
+  	echo "Attention: les Outils de Calcul Scientifique (OCS) suivants sont installés sur le poste:"
+	echo "$ocs"
+	echo -e "Si vous souhaitez les supprimer, ouvrez une session graphique et utilisez la logithèque avant de supprimer vos données.\n"
+fi
+
+echo "Attention, cette commande supprimera de façon définitive, irréversible et sécurisée toutes vos données personnelles (notamment /home/$USER). Voulez-vous procéder ? Tapez oui en toutes lettres pour continuer."
+read resp
+if [ "$resp" != "oui" ] ; then
+	echo "abandon"
+	exit 3
+fi
+
+echo "Début de la suppression. Ne débranchez pas le poste."
+cd /
+find /home/$USER /local00/tmp -type f -exec shred -f -n 3 -z {} \;
+rm /home/$USER /local00/tmp -fr 2>/dev/null
+sync
+echo "Suppression terminée."
+

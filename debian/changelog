@@ -1,3 +1,52 @@
+scibian (9.0.8) scibian9; urgency=medium
+
+  *  Add scibian-remove-my-data
+
+ -- Scibian Packaging Team <packaging@scibian.org>  Mon, 18 Jun 2018 11:48:46 +0200
+
+scibian (9.0.7) scibian9; urgency=medium
+
+  * scibian-standard: add virtualbox in unattended-upgrade's blacklist
+
+ -- Scibian Packaging Team <packaging@scibian.org>  Thu, 03 May 2018 15:45:02 +0200
+
+scibian (9.0.6) scibian9; urgency=medium
+
+  * scibian-language: add scibian-language-python dependency
+
+ -- Scibian Packaging Team <packaging@scibian.org>  Wed, 07 Mar 2018 11:31:50 +0100
+
+scibian (9.0.5) scibian9; urgency=medium
+
+  * scibian-kernel-4.9: Update linux-image & linux-headers dependencies
+
+ -- Scibian Packaging Team <packaging@scibian.org>  Wed, 17 Jan 2018 16:53:30 +0100
+
+scibian (9.0.4) scibian9; urgency=medium
+
+  * Refresh Scibian icons
+
+ -- Scibian Packaging Team <packaging@scibian.org>  Thu, 09 Nov 2017 14:52:46 +0100
+
+scibian (9.0.3) scibian9; urgency=medium
+
+  * scibian-desktop: Add scibian-modules dependency
+  * Bump Standards-Version to 4.1.1
+
+ -- Scibian Packaging Team <packaging@scibian.org>  Tue, 24 Oct 2017 14:42:19 +0200
+
+scibian (9.0.2) scibian9; urgency=medium
+
+  * scibian-desktop: Remove cups-client dependency
+
+ -- Scibian Packaging Team <packaging@scibian.org>  Mon, 16 Oct 2017 11:46:13 +0200
+
+scibian (9.0.1) scibian9; urgency=medium
+
+  * Fix conflicts in Vino configuration.
+
+ -- Scibian Packaging Team <packaging@scibian.org>  Tue, 10 Oct 2017 15:25:57 +0200
+
 scibian (9.0.0) scibian9; urgency=medium
 
   * Initial release

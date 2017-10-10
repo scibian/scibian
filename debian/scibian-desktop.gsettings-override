@@ -5,10 +5,6 @@ picture-uri='file:///usr/share/wallpapers/scibian/wallpaper1.jpg'
 # Squeeze-like icons on the desktop
 show-desktop-icons=true
 
-[org.gnome.desktop.remote-access]
-# Fix vino server issue (#4095)
-disable-background=false
-
 [org.gnome.desktop.screensaver]
 # Scibian 9 default lockscreen background
 picture-options='zoom'
@@ -72,5 +68,3 @@ disable-external=true
 show-all-packages=true
 enable-autoremove=true
 
-[org.gnome.Vino]
-disable-background=true
