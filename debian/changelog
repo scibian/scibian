@@ -1,3 +1,9 @@
+scibian (9.0.1) scibian9; urgency=medium
+
+  * Fix conflicts in Vino configuration.
+
+ -- Scibian Packaging Team <packaging@scibian.org>  Tue, 10 Oct 2017 15:25:57 +0200
+
 scibian (9.0.0) scibian9; urgency=medium
 
   * Initial release
