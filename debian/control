@@ -33,7 +33,7 @@ Architecture: any
 Depends: scibian-standard, scibian-gnome,
 # System utils
          cgroup-tools, ftp, lftp,
-         cryptsetup, cups-client, curl, makepasswd,
+         cryptsetup, curl, makepasswd,
          nfs-common, nfs4-acl-tools,
          sl, tofrodos, xterm, xserver-xephyr,
 # Documentation
