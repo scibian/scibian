@@ -40,7 +40,7 @@ Depends: scibian-standard, scibian-gnome,
          bash-doc, vim-doc, bzip2-doc,
 # Scibian
 #        scibian-documentation,
-         scibian-devel, scibian-notify,
+         scibian-devel, scibian-notify, scibian-modules,
 # Apps & add-ons
          devhelp, emacs25, emacs-goodies-el, gedit-plugins,
          gnome-packagekit, libreoffice-pdfimport,
