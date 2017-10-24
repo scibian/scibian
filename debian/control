@@ -3,7 +3,7 @@ Section: scibian
 Priority: optional
 Maintainer: Scibian Packaging Team <packaging@scibian.org>
 Build-Depends: debhelper (>= 10)
-Standards-Version: 4.0.0
+Standards-Version: 4.1.1
 
 Package: scibian-standard
 Architecture: any
