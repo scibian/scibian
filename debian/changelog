@@ -1,3 +1,10 @@
+scibian (9.0.3) scibian9; urgency=medium
+
+  * scibian-desktop: Add scibian-modules dependency
+  * Bump Standards-Version to 4.1.1
+
+ -- Scibian Packaging Team <packaging@scibian.org>  Tue, 24 Oct 2017 14:42:19 +0200
+
 scibian (9.0.2) scibian9; urgency=medium
 
   * scibian-desktop: Remove cups-client dependency
