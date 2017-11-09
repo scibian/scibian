@@ -1,3 +1,9 @@
+scibian (9.0.4) scibian9; urgency=medium
+
+  * Refresh Scibian icons
+
+ -- Scibian Packaging Team <packaging@scibian.org>  Thu, 09 Nov 2017 14:52:46 +0100
+
 scibian (9.0.3) scibian9; urgency=medium
 
   * scibian-desktop: Add scibian-modules dependency
