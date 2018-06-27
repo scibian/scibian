@@ -12,3 +12,8 @@ scibian-desktop/icons/* /usr/share/icons/scibian
 scibian-desktop/99-scibian-settings /usr/share/gdm/dconf
 scibian-desktop/scibian-prefs.js /usr/lib/firefox-esr/defaults/pref/
 scibian-desktop/scibian.cfg /usr/lib/firefox-esr/
+scibian-desktop/scibian-remove-my-data /usr/bin
+scibian-desktop/scibian-fix-tg3 /usr/sbin
+scibian-desktop/90_tg3 /lib/systemd/system-sleep
+scibian-desktop/90-tg3.rules /etc/udev/rules.d
+scibian-desktop/99-scibian-dmesg.conf /etc/sysctl.d

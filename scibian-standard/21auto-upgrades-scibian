@@ -3,3 +3,7 @@ APT::Periodic::Update-Package-Lists "1";
 
 // Do "apt-get upgrade" automatically every n-days (0=disable)
 APT::Periodic::Unattended-Upgrade "7";
+
+// Do "apt-get autoclean" automatically every n-days (0=disable)
+APT::Periodic::AutocleanInterval "21";
+

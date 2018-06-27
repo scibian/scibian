@@ -24,10 +24,10 @@ Unattended-Upgrade::Origins-Pattern {
         // Codename based matching:
         // This will follow the migration of a release through different
         // archives (e.g. from testing to stable and later oldstable).
-      "o=Debian,n=stretch";
-      "o=Debian,n=stretch-updates";
-      "o=Scibian,n=scibian9";
-      "o=Scibian,n=scibian9-edf";
+      "o=Debian,n=buster";
+      "o=Debian,n=buster-updates";
+      "o=Scibian,n=scibian10";
+      "o=Scibian,n=scibian10-edf";
 };
 
 // List of packages to not update (regexp are supported)

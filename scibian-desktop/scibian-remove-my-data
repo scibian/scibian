@@ -17,7 +17,7 @@ if [ $(tty) != '/dev/tty2' ] ; then
 	exit 2
 fi
 
-ocs=$(awk '/^Package: / { print $2}' /var/lib/apt/lists/*scibian9-applis* | while read pkg ; do if grep -sq '^Package: '"$pkg"'$' /var/lib/dpkg/status && dpkg -l "$pkg" | grep -sq "^ii" ; then echo -e "\t$pkg" ; fi ; done)
+ocs=$(awk '/^Package: / { print $2}' /var/lib/apt/lists/*scibian10-applis* | while read pkg ; do if grep -sq '^Package: '"$pkg"'$' /var/lib/dpkg/status && dpkg -l "$pkg" | grep -sq "^ii" ; then echo -e "\t$pkg" ; fi ; done)
 if [ -n "$ocs" ] ; then
   	echo "Attention: les Outils de Calcul Scientifique (OCS) suivants sont installés sur le poste:"
 	echo "$ocs"

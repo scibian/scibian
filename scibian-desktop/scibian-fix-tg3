@@ -1,0 +1,25 @@
+#!/bin/bash
+
+if [ -f /tmp/fixtg3.stamp ] && [ $(expr $(date +%s) - $(date -r /tmp/fixtg3.stamp +%s)) -lt 30 ] ; then
+	echo "tg3 fix already triggered, not doing anything"
+	exit 0
+fi
+
+sleep 2
+
+if [ -n "$PCI_SLOT_NAME" ] ; then
+	pci_addr="$PCI_SLOT_NAME"
+else
+	pci_addr=$(lspci | grep BCM57762 | cut -f 1 -d ' ')
+	if [ -z "$pci_addr" ]; then
+		exit 0 # no device
+	fi
+	pci_addr="0000:"$pci_addr
+fi
+
+net_dev=$(ls -l /sys/class/net/*/device/driver | grep /tg3 | cut -d / -f 5)
+if [ -z "$net_dev" ] || ! (mii-tool $net_dev); then
+	echo 1 > "/sys/bus/pci/devices/${pci_addr}/remove"
+	echo 1 > /sys/bus/pci/rescan
+	touch /tmp/fixtg3.stamp
+fi

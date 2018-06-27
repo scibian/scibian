@@ -2,65 +2,71 @@ Source: scibian
 Section: scibian
 Priority: optional
 Maintainer: Scibian Packaging Team <packaging@scibian.org>
-Build-Depends: debhelper (>= 10)
-Standards-Version: 4.1.1
+Build-Depends: debhelper (>= 12)
+Standards-Version: 4.3.0
 
 Package: scibian-standard
 Architecture: any
 Depends: acl, apt-transport-https, at, bash-completion, bc, binfmt-support,
-         scibian-archive-keyring, scibian-kernel-default, scibian-version,
+         scibian-archive-keyring, scibian-version,
          gawk, htop, less, lsb-release, lsof, ltrace, numactl, rsync, openssh-server,
-         screen, sudo | sudo-ldap, strace, tcsh, tree, unattended-upgrades, vim
-Description: Scibian metapackage for base system
- Scibian metapackage for base system, desktop & server
-
-Package: scibian-kernel-default
-Architecture: any
-Depends: scibian-kernel-4.9
-Description: Scibian metapackage for default kernel
- Scibian metapackage for default kernel
-
-Package: scibian-kernel-4.9
-Architecture: any
-Depends: linux-doc-4.9, linux-headers-amd64, linux-image-amd64,
-         linux-kbuild-4.9, linux-libc-dev, linux-source-4.9
-Provides: scibian-kernel
-Description: Scibian metapackage for kernel 4.9
- Scibian metapackage for kernel 4.9, include image, source & headers
-
-Package: scibian-desktop
-Architecture: any
-Depends: scibian-standard, scibian-gnome,
+         bzip2, screen, sudo | sudo-ldap, strace, tree, vim
 # System utils
          cgroup-tools, ftp, lftp,
          cryptsetup, curl, makepasswd,
          nfs-common, nfs4-acl-tools,
-         sl, tofrodos, xterm, xserver-xephyr,
-# Documentation
-         bash-doc, vim-doc, bzip2-doc,
+Description: Scibian metapackage for base system
+ Scibian metapackage for base system, desktop & server
+
+#Package: scibian-kernel-default
+#Architecture: any
+#Depends: scibian-kernel-4.9
+#Description: Scibian metapackage for default kernel
+# Scibian metapackage for default kernel
+#
+#Package: scibian-kernel-4.9
+#Architecture: any
+#Depends: linux-doc-4.9, linux-headers-amd64, linux-image-amd64,
+#         linux-kbuild-4.9, linux-libc-dev, linux-source-4.9
+#Provides: scibian-kernel
+#Description: Scibian metapackage for kernel 4.9
+# Scibian metapackage for kernel 4.9, include image, source & headers
+
+Package: scibian-desktop
+Architecture: any
+Depends: scibian-standard, scibian-gnome,
+         unattended-upgrades,
+         sl, tofrodos,
 # Scibian
 #        scibian-documentation,
-         scibian-devel, scibian-notify, scibian-modules,
+#        scibian-devel, 
+#	 scibian-notify, scibian-modules,
 # Apps & add-ons
-         devhelp, emacs25, emacs-goodies-el, gedit-plugins,
-         gnome-packagekit, libreoffice-pdfimport,
-         gnuplot, gnuplot-doc, grace, graphviz, graphviz-doc,
-         fig2dev, mayavi2, paraview, paraview-doc, rapidsvn,
-         vim-gtk3, gnome-shell-extension-applications-overview-tooltip,
+         emacs25, emacs-goodies-el, 
+         gnome-packagekit,
+         libpam-mkhomedir-scibian,
+         vim-gtk3, 
+# gnome-shell-extension-applications-overview-tooltip,
 # Firefox
-        firefox-esr, xul-ext-gnome-keyring,
-        xul-ext-ublock-origin, p11-kit,
+        firefox-esr, firefox-esr-l10n-fr, webext-ublock-origin
 Description: Scibian metapackage for desktop
  Scibian metapackage for desktop installations
 
-Package: scibian-devel
+Package: scibian-office
 Architecture: any
-Depends: scibian-standard, scibian-language-c, scibian-language-c++,
+Depends: libreoffice-core,  
+         libreoffice-draw, libreoffice-calc, libreoffice-writer,libreoffice-impress,
+         libreoffice-pdfimport, 
+         libreoffice-gnome, libreoffice-evolution,
+         pidgin, pidgin-sipe,
+Description: Scibian metapackage for office work
+ Scibian metapackage for office work. It contains most of the classical tools for office work
+
+Package: scibian-full-devel-stack
+Architecture: any
+Depends: scibian-standard, scibian-basic-devel, scibian-language-c, scibian-language-c++,
          scibian-language-fortran, scibian-language-python,
-         autoconf, autoconf-doc, binutils, binutils-doc, build-essential,
-         bzip2, bzip2-doc, clang, cmake, cmake-doc, colordiff, colormake,
          cvs, doxygen, doxygen-doc, flex, flex-doc, gdb, 
-         git, git-doc, m4, m4-doc, meld, mercurial, quilt, subversion, ui-auto,
          comerr-dev, graphviz-dev, 
          gstreamer1.0-doc, gstreamer1.0-plugins-base-doc, hdf5-tools, icu-doc,
          libargtable2-dev, libargtable2-docs, libaudio-dev, libavahi-client-dev,
@@ -72,7 +78,7 @@ Depends: scibian-standard, scibian-language-c, scibian-language-c++,
          libhdf5-dev, libhdf5-doc, libhwloc-dev, libhwloc-doc,
          libice-dev, libice-doc, libicu-dev, libilmbase-dev, 
          libjbig-dev, libjpeg62-turbo-dev, libjs-jquery, liblcms2-dev, libltdl-dev,
-         libmatheval-dev, libmng-dev, libnetcdf-dev, libomniorb4-dev, libomnithread3-dev,
+         libmatheval-dev, libmng-dev, libnetcdf-dev, 
          liborc-0.4-dev, liborc-0.4-doc, libpciaccess-dev, libpthread-workqueue-dev,
          libqscintilla2-dev, libraw-dev, libraw-doc, librdmacm-dev,
          libsm-dev, libsm-doc, libtbb-dev, libtbb-doc, libtiff5-dev, libtiff-doc,
@@ -81,6 +87,15 @@ Depends: scibian-standard, scibian-language-c, scibian-language-c++,
          netcdf-bin, netcdf-doc, time
 Description: Scibian metapackage for software developpement
  Scibian metapackage for software developpement
+
+Package: scibian-basic-devel
+Architecture: any
+Depends: autoconf, autoconf-doc, binutils, binutils-doc, build-essential,
+         clang, cmake, cmake-doc, colordiff, colormake,
+         devhelp, git, git-doc, m4, m4-doc, meld, mercurial, quilt, subversion, ui-auto,
+         rapidsvn,
+Description: Scibian metapackage for basic developpment
+ Scibian metapackage for basic developpment
 
 Package: scibian-language-c
 Architecture: any
@@ -177,13 +192,4 @@ Architecture: any
 Depends: expect, perl-tk, tcl-dev, tcl-doc, tix, tix-dev, tk-dev, tk-doc
 Description: Scibian metapackage for Tcl/Tk language
  Scibian metapackage for Tcl/Tk language
-
-Package: scibian-eclipse
-Architecture: any
-Depends: scibian-standard (= ${binary:Version}), eclipse, eclipse-jdt,
-         eclipse-cdt, eclipse-gef, eclipse-gef-doc, eclipse-egit,
-         eclipse-ptp-rdt, eclipse-subclipse, 
-         eclipse-pydev
-Description: Scibian metapackage for Eclipse
- Scibian metapackage for Eclipse
 

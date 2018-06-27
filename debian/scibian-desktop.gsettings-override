@@ -32,11 +32,14 @@ use-tree-view=true
 [org.gnome.nautilus.preferences]
 default-folder-viewer='list-view'
 #Open archives in File Roller
-automatic-decompression=false
+#automatic-decompression=false
+
+[org.gnome.settings-daemon.plugins.power]
+sleep-inactive-ac-type='nothing'
 
 [org.gnome.online-accounts]
 #Disable all online account providers
-whitelisted-providers=[]
+whitelisted-providers=["kerberos"]
 
 [org.gnome.shell]
 favorite-apps=['firefox-esr.desktop', 'org.gnome.Nautilus.desktop', 'libreoffice-startcenter.desktop', 'org.gnome.gedit.desktop', 'org.gnome.Terminal.desktop', 'gnome-calculator.desktop', 'org.gnome.Packages.desktop']
