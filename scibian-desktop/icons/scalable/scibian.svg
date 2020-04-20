@@ -16,7 +16,7 @@
    version="1.1"
    id="svg3862"
    inkscape:version="0.92.1 r15371"
-   sodipodi:docname="full.svg"
+   sodipodi:docname="scibian_10.svg"
    inkscape:export-filename="/home/fg22aadn/scibianimg/full.svg.png"
    inkscape:export-xdpi="89.970428"
    inkscape:export-ydpi="89.970428">
@@ -52,8 +52,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4"
-     inkscape:cx="273.69855"
-     inkscape:cy="-54.667618"
+     inkscape:cx="387.98426"
+     inkscape:cy="93.408809"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -61,8 +61,8 @@
      fit-margin-left="0"
      fit-margin-right="0"
      fit-margin-bottom="0"
-     inkscape:window-width="1920"
-     inkscape:window-height="1016"
+     inkscape:window-width="1366"
+     inkscape:window-height="704"
      inkscape:window-x="0"
      inkscape:window-y="27"
      inkscape:window-maximized="1"
@@ -172,14 +172,17 @@
        id="rect3800"
        style="fill:#5e70cc;fill-opacity:1;stroke:none;stroke-width:0.26458332" />
     <g
-       transform="matrix(0.26458333,0,0,0.26458333,8.0344852,5.6427184)"
-       style="font-style:normal;font-weight:normal;font-size:109.23057556px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#5e70cc;fill-opacity:1;stroke:none"
-       id="text2997-3">
+       aria-label="10"
+       style="font-style:normal;font-weight:normal;font-size:28.22222137px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#5e70cc;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       id="text28">
       <path
-         inkscape:connector-curvature="0"
-         d="m 680.82561,118.03768 c 21.55475,8e-5 32.33215,6.77236 32.33225,20.31688 v 38.5584 c -10e-5,13.54459 -10.7775,20.31688 -32.33225,20.31688 h -15.51074 c -1.74774,0 -2.91286,-0.47333 -3.49538,-1.41999 -0.50979,-1.01949 -0.76466,-2.5123 -0.76461,-4.47846 -5e-5,-1.96614 0.25482,-3.42255 0.76461,-4.36922 0.58252,-1.01948 1.74764,-1.52922 3.49538,-1.52923 h 15.07382 c 6.40812,1e-5 11.06862,-0.80101 13.98152,-2.40307 2.91272,-1.67485 4.36913,-3.71382 4.36922,-6.11691 v -6.44461 h -52.53991 c -21.55485,3e-5 -32.33225,-6.77226 -32.33225,-20.31688 v -11.79691 c 0,-13.54452 10.7774,-20.3168 32.33225,-20.31688 h 34.62609 m -34.18917,11.7969 c -6.40822,7e-5 -11.06872,0.8375 -13.98151,2.5123 -2.91283,1.67493 -4.36924,3.67749 -4.36922,6.00768 v 11.79691 c -2e-5,2.40311 1.45639,4.44208 4.36922,6.11691 2.91279,1.60209 7.57329,2.40311 13.98151,2.40307 h 52.10299 v -20.31689 c -9e-5,-2.33019 -1.4565,-4.33275 -4.36922,-6.00768 -2.9129,-1.6748 -7.5734,-2.51223 -13.98152,-2.5123 h -33.75225"
-         style="font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Neuropol;-inkscape-font-specification:'Neuropol Bold';fill:#5e70cc"
-         id="path3356" />
+         d="m 173.89909,51.94528 q 0,0.716139 -0.41981,0.938389 -0.4198,0.22225 -1.23472,0.22225 -0.79022,0 -1.21003,-0.22225 -0.4198,-0.22225 -0.4198,-0.938389 V 36.16553 q 0,-0.716139 0.4198,-0.938389 0.41981,-0.22225 1.21003,-0.22225 0.81492,0 1.23472,0.22225 0.41981,0.22225 0.41981,0.938389 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24.69444466px;font-family:Neuropol;-inkscape-font-specification:Neuropol;fill:#5e70cc;stroke-width:0.26458332"
+         id="path30" />
+      <path
+         d="m 183.29687,53.007141 q -7.30956,0 -7.30956,-4.593167 v -8.717139 q 0,-4.593166 7.30956,-4.593166 h 7.18608 q 7.30956,0 7.30956,4.593166 v 8.717139 q 0,4.593167 -7.30956,4.593167 z m 7.0873,-2.667 q 2.17311,0 3.16089,-0.567972 0.98778,-0.567972 0.98778,-1.358195 v -8.717139 q 0,-0.814916 -0.98778,-1.358194 -0.98778,-0.567972 -3.16089,-0.567972 h -6.98853 q -2.17311,0 -3.16089,0.567972 -0.98777,0.543278 -0.98777,1.358194 v 8.717139 q 0,0.790223 0.98777,1.358195 0.98778,0.567972 3.16089,0.567972 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24.69444466px;font-family:Neuropol;-inkscape-font-specification:Neuropol;fill:#5e70cc;stroke-width:0.26458332"
+         id="path32" />
     </g>
   </g>
 </svg>

@@ -11,6 +11,6 @@
 logo='/usr/share/icons/scibian/png/scibian.png'
 fallback-logo='/usr/share/icons/scibian/png/scibian.png'
 
-# Show Scibian 9 banner
+# Show Scibian 10 banner
 banner-message-enable=true
-banner-message-text='Scibian 9'
+banner-message-text='Scibian 10'

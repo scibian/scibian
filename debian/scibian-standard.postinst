@@ -6,13 +6,23 @@ set -e
 
 echo "SHELL=/bin/bash" > /etc/default/useradd
 
+# Generic group Creation
+# scibian-users chroot group creation and adding to pam_group
+addgroup --system --quiet chroot
+addgroup --system --quiet scibian-users
+
+
 # PAM update
 pam-auth-update --package
 
-[ ! -d /var/lib/scibian ] && mkdir /var/lib/scibian/ 
+# Création du dossier de journalisation
+if [ ! -d /var/log/journal ]; then
+  mkdir /var/log/journal
+fi
 
-## TO BE REMOVED when keytab host retrieval is set
-echo "%tmi ALL=(ALL) ALL" >> /etc/sudoers
+if [ ! -d /var/lib/scibian ]; then
+  mkdir /var/lib/scibian/
+fi
 
 
 

@@ -15,5 +15,47 @@
     <pcolor>#ffffff</pcolor>
     <scolor>#000000</scolor>
   </wallpaper>
+  <wallpaper>
+    <name>Scibian 3</name>
+    <filename>/usr/share/wallpapers/scibian/wallpaper3.jpg</filename>
+    <options>zoom</options>
+    <pcolor>#ffffff</pcolor>
+    <scolor>#000000</scolor>
+  </wallpaper>
+  <wallpaper>
+    <name>Scibian 4</name>
+    <filename>/usr/share/wallpapers/scibian/wallpaper4.jpg</filename>
+    <options>zoom</options>
+    <pcolor>#ffffff</pcolor>
+    <scolor>#000000</scolor>
+  </wallpaper>
+  <wallpaper>
+    <name>Scibian 5</name>
+    <filename>/usr/share/wallpapers/scibian/wallpaper5.jpg</filename>
+    <options>zoom</options>
+    <pcolor>#ffffff</pcolor>
+    <scolor>#000000</scolor>
+  </wallpaper>
+  <wallpaper>
+    <name>Scibian 6</name>
+    <filename>/usr/share/wallpapers/scibian/wallpaper6.jpg</filename>
+    <options>zoom</options>
+    <pcolor>#ffffff</pcolor>
+    <scolor>#000000</scolor>
+  </wallpaper>
+  <wallpaper>
+    <name>Scibian 7</name>
+    <filename>/usr/share/wallpapers/scibian/wallpaper7.jpg</filename>
+    <options>zoom</options>
+    <pcolor>#ffffff</pcolor>
+    <scolor>#000000</scolor>
+  </wallpaper>
+  <wallpaper>
+    <name>Scibian 8</name>
+    <filename>/usr/share/wallpapers/scibian/wallpaper8.jpg</filename>
+    <options>zoom</options>
+    <pcolor>#ffffff</pcolor>
+    <scolor>#000000</scolor>
+  </wallpaper>
 </wallpapers>
 

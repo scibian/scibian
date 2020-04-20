@@ -3,3 +3,5 @@ scibian-standard/21auto-upgrades-scibian		/etc/apt/apt.conf.d
 scibian-standard/51unattended-upgrades-scibian		/etc/apt/apt.conf.d
 scibian-standard/drop-user-messages.conf		/etc/rsyslog.d
 scibian-standard/vimrc.local				/etc/vim   
+scibian-standard/block_nouveau.conf                     /etc/modprobe.d/
+scibian-standard/scibian-system-groups.conf		/etc/systemd/system/user@.service.d/
