@@ -1,3 +1,9 @@
+scibian (10.0.5.5) scibian10; urgency=medium
+
+  * Removed old dependency: libpthread-workqueue-dev
+
+ -- Scibian Packaging Team <packaging@scibian.org>  Tue, 21 Apr 2020 15:34:57 +0200
+
 scibian (10.0.5.4) scibian10; urgency=medium
 
   * Add scibian-full-devel-stack on scibian-desktop
