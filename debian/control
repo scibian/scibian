@@ -88,7 +88,7 @@ Depends: scibian-standard, scibian-basic-devel, scibian-language-c, scibian-lang
          libice-dev, libice-doc, libicu-dev, libilmbase-dev,
          libjbig-dev, libjpeg62-turbo-dev, libjs-jquery, liblcms2-dev, libltdl-dev,
          libmatheval-dev, libmng-dev, libnetcdf-dev,
-         liborc-0.4-dev, liborc-0.4-doc, libpciaccess-dev, libpthread-workqueue-dev,
+         liborc-0.4-dev, liborc-0.4-doc, libpciaccess-dev,
          libqscintilla2-dev, libraw-dev, libraw-doc, librdmacm-dev,
          libsm-dev, libsm-doc, libtbb-dev, libtbb-doc, libtiff5-dev, libtiff-doc,
          libtool-doc, libxml2-dev, libxml2-doc, libxmu-dev, libxrender-dev,
