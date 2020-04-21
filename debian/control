@@ -8,7 +8,7 @@ Standards-Version: 4.3.0
 Package: scibian-standard
 Architecture: any
 Depends: acl, apt-transport-https, at, bash-completion, bc, binfmt-support,
-         scibian-archive-keyring, scibian-version,
+         scibian-version,
          gawk, htop, less, lsb-release, lsof, ltrace, numactl, rsync, openssh-server,
          bzip2, screen, sudo | sudo-ldap, strace, tree, vim, wget,
 # System utils
@@ -73,7 +73,7 @@ Description: Scibian metapackage for office work
 
 Package: scibian-full-devel-stack
 Architecture: any
-Depends: scibian-standard, scibian-basic-devel, scibian-language-c, scibian-language-c++,
+Depends: scibian-basic-devel, scibian-language-c, scibian-language-c++,
          scibian-language-fortran, scibian-language-python,
          cvs, doxygen, doxygen-doc, flex, flex-doc, gdb,
          comerr-dev, graphviz-dev, 
