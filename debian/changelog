@@ -1,3 +1,9 @@
+scibian (10.0.5.6) scibian10; urgency=medium
+
+  * Modified dependencies
+
+ -- Scibian Packaging Team <packaging@scibian.org>  Tue, 21 Apr 2020 15:47:15 +0200
+
 scibian (10.0.5.5) scibian10; urgency=medium
 
   * Removed old dependency: libpthread-workqueue-dev
