@@ -1,3 +1,13 @@
+scibian (10.0.11) scibian10; urgency=medium
+
+  * Added some dev dependencies
+  * Disabling globally gnome tracker
+  * Added a polkit rule to allow thunderbold dockstation enrollment with gnome
+  * Changed default firefox homepage for myelectricnetwork.fr
+  * Version number is bumped to keep it the same as our internal packages
+
+ -- Scibian Packaging Team <packaging@scibian.org>  Wed, 30 Sep 2020 16:09:02 +0200
+
 scibian (10.0.5.6) scibian10; urgency=medium
 
   * Modified dependencies
