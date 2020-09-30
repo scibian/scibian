@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Update Grub
 update-grub > /dev/null 2>&1
@@ -8,11 +8,8 @@ update-mime-database /usr/share/mime > /dev/null 2>&1
 
 set -e
 
-
 # Disable Wayland
-
 sed -is "s/^#WaylandEnable=false/WaylandEnable=false/" /etc/gdm3/daemon.conf
-
 
 set -u
 ckbi=/usr/lib/firefox-esr/libnssckbi.so
@@ -34,6 +31,17 @@ if [ scibian-desktop = "$(dpkg-divert --listpackage $ckbi)" ]; then
 fi
 unset ckbi
 set +u
+
+trackerservices=("tracker-extract.service" "tracker-miner-apps.service" "tracker-miner-fs.service" "tracker-store.service" "tracker-writeback.service")
+
+for ts in "${trackerservices[@]}"; do
+  fullpath="/etc/systemd/user/"${1}
+  if [ ! -L ${fullpath} ] && [ $(readlink -f ${fullpath}) = "/dev/null" ]; then
+    echo "not masking"
+  else
+    systemctl --user --global mask $ts
+  fi
+done
 
 #DEBHELPER#
 
