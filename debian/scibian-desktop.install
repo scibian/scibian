@@ -1,5 +1,6 @@
 scibian-desktop/org.freedesktop.login1.hibernate.pkla /etc/polkit-1/localauthority/20-org.d
 scibian-desktop/org.freedesktop.udisks2.pkla /etc/polkit-1/localauthority/20-org.d
+scibian-desktop/12-thunderbolt-rules.pkla /etc/polkit-1/localauthority/20-org.d
 scibian-desktop/scibian-passwd.desktop /usr/share/applications
 scibian-desktop/06_scibian_theme /etc/grub.d/
 scibian-desktop/scibian_background.sh /usr/share/scibian/grub/

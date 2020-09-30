@@ -1,0 +1,13 @@
+[Allow managing thunderbolt device]
+Identity=unix-group:scibian-users
+Action=org.freedesktop.bolt.manage
+ResultAny=yes
+ResultInactive=no
+ResultActive=yes
+
+[Allow enrolling thunderbolt device]
+Identity=unix-group:scibian-users
+Action=org.freedesktop.bolt.enroll
+ResultAny=yes
+ResultInactive=no
+ResultActive=yes
