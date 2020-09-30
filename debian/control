@@ -8,7 +8,7 @@ Standards-Version: 4.3.0
 Package: scibian-standard
 Architecture: any
 Depends: acl, apt-transport-https, at, bash-completion, bc, binfmt-support,
-         scibian-version,
+         scibian-archive-keyring, scibian-version,
          gawk, htop, less, lsb-release, lsof, ltrace, numactl, rsync, openssh-server,
          bzip2, screen, sudo | sudo-ldap, strace, tree, vim, wget,
 # System utils
@@ -23,6 +23,17 @@ Depends: scibian-kernel-4.19
 Description: Scibian metapackage for default kernel
  Scibian metapackage for default kernel
 
+Package: scibian-kernel-5.5
+Architecture: any
+Pre-Depends: scibian-backport-repo
+Conflicts: crda, wireless-regdb
+Depends: linux-doc-5.5, linux-headers-5.5.0-0.bpo.2-amd64,
+         linux-kbuild-5.5, linux-source-5.5, linux-image-5.5.0-0.bpo.2-amd64-unsigned
+Provides: scibian-kernel
+Description: Meta-paquet Scibian pour l'installation du noyau 5.5
+ Ce meta-paquet installe l'image, les sources et les headers du noyau 5.5.
+ Ce paquet requiert l'activation préalable du dépôt scibian10-bpo.
+
 Package: scibian-kernel-4.19
 Architecture: any
 Depends: linux-doc-4.19, linux-headers-amd64, linux-image-amd64,
@@ -36,7 +47,7 @@ Architecture: any
 Depends: scibian-standard, scibian-gnome,
          scibian-office, scibian-basic-devel,
          scibian-notify, scibian-modules,
-         scibian-plymouth, scibian-default-fonts,
+         scibian-plymouth, scibian-update, scibian-default-fonts,
 # Gnome
          gnome-shell-extension-desktop-icons, gnome-shell-extension-applications-overview-tooltip,
          gnome-packagekit, gnome-shell-extension-audio-switcher,
@@ -73,8 +84,8 @@ Description: Scibian metapackage for office work
 
 Package: scibian-full-devel-stack
 Architecture: any
-Depends: scibian-basic-devel, scibian-language-c, scibian-language-c++,
-         scibian-language-fortran, scibian-language-python,
+Depends: scibian-standard, scibian-basic-devel, scibian-language-c, scibian-language-c++,
+         scibian-language-fortran, scibian-language-python, scibian-devel-edf,
          cvs, doxygen, doxygen-doc, flex, flex-doc, gdb,
          comerr-dev, graphviz-dev, 
          gstreamer1.0-doc, gstreamer1.0-plugins-base-doc, hdf5-tools, icu-doc,
@@ -88,7 +99,7 @@ Depends: scibian-basic-devel, scibian-language-c, scibian-language-c++,
          libice-dev, libice-doc, libicu-dev, libilmbase-dev,
          libjbig-dev, libjpeg62-turbo-dev, libjs-jquery, liblcms2-dev, libltdl-dev,
          libmatheval-dev, libmng-dev, libnetcdf-dev,
-         liborc-0.4-dev, liborc-0.4-doc, libpciaccess-dev,
+         liborc-0.4-dev, liborc-0.4-doc, libpciaccess-dev, libpthread-workqueue-dev,
          libqscintilla2-dev, libraw-dev, libraw-doc, librdmacm-dev,
          libsm-dev, libsm-doc, libtbb-dev, libtbb-doc, libtiff5-dev, libtiff-doc,
          libtool-doc, libxml2-dev, libxml2-doc, libxmu-dev, libxrender-dev,
