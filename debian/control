@@ -56,7 +56,7 @@ Depends: scibian-standard, scibian-gnome,
 # Documentation
          bash-doc, vim-doc, bzip2-doc,
 # Scibian
-         scibian-full-devel-stack,
+         scibian-language-c, scibian-language-c++, scibian-language-fortran, scibian-language-python, scibian-basic-devel,
 # Apps & add-ons
          libpam-mkhomedir-scibian,
          vim-gtk3, pavucontrol, 

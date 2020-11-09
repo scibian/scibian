@@ -1,3 +1,9 @@
+scibian (10.0.13) scibian10; urgency=medium
+
+  * fix unresolved dependencies on internal packages
+
+ -- Maxime Prost <maxime.prost@edf.fr>  Mon, 09 Nov 2020 19:42:02 +0100
+
 scibian (10.0.12) scibian10; urgency=medium
 
   * Removed bad dependency in scibian-full-devel-stack
