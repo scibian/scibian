@@ -85,7 +85,7 @@ Description: Scibian metapackage for office work
 Package: scibian-full-devel-stack
 Architecture: any
 Depends: scibian-standard, scibian-basic-devel, scibian-language-c, scibian-language-c++,
-         scibian-language-fortran, scibian-language-python, scibian-devel-edf,
+         scibian-language-fortran, scibian-language-python,
          cvs, doxygen, doxygen-doc, flex, flex-doc, gdb,
          comerr-dev, graphviz-dev, 
          gstreamer1.0-doc, gstreamer1.0-plugins-base-doc, hdf5-tools, icu-doc,

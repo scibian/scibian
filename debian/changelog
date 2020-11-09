@@ -1,3 +1,9 @@
+scibian (10.0.12) scibian10; urgency=medium
+
+  * Removed bad dependency in scibian-full-devel-stack
+
+ -- Scibian Packaging Team <packaging@scibian.org>  Mon, 09 Nov 2020 18:47:17 +0100
+
 scibian (10.0.11) scibian10; urgency=medium
 
   * Added some dev dependencies
