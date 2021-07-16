@@ -1,3 +1,9 @@
+scibian (9.0.6) scibian9; urgency=medium
+
+  * Fix kernel dependencies
+
+ -- Scibian Packaging Team <packaging@scibian.org>  Fri, 16 Jul 2021 16:36:32 +0200
+
 scibian (9.0.5) scibian9; urgency=medium
 
   * Fixed old dependencies
