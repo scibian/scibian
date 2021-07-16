@@ -22,7 +22,7 @@ Description: Scibian metapackage for default kernel
 
 Package: scibian-kernel-4.9
 Architecture: any
-Depends: linux-doc-4.9, linux-headers-4.9 (>= 4.9.0-11-amd64), linux-image-4.9 (>= 4.9.0-11-amd64),
+Depends: linux-doc-4.9, linux-headers-4.9.0-16-amd64, linux-image-4.9.0-16-amd64,
          linux-kbuild-4.9, linux-libc-dev, linux-source-4.9
 Provides: scibian-kernel
 Description: Scibian metapackage for kernel 4.9
